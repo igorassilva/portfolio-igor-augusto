@@ -365,6 +365,7 @@ img {
 
 .linha-tempo li {
     position: relative;
+    margin-bottom: 20px;
 }
 
 .linha-tempo li::before {
