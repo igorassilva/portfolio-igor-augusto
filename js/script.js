@@ -17,11 +17,12 @@ botaoMenu.addEventListener("click", function () {
 
 // Alternância entre tema claro e escuro, salvando a escolha no localStorage
 const botaoTema = document.getElementById("botao-tema");
-const textoTema = botaoTema.querySelector(".texto-tema");
 
 function atualizarTextoTema() {
     const claro = document.documentElement.classList.contains("tema-claro");
-    textoTema.textContent = claro ? "Tema escuro" : "Tema claro";
+    const texto = claro ? "Ativar tema escuro" : "Ativar tema claro";
+    botaoTema.setAttribute("aria-label", texto);
+    botaoTema.title = texto;
 }
 
 botaoTema.addEventListener("click", function () {

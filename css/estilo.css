@@ -148,27 +148,37 @@ img {
 .botao-tema {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     border: 1px solid var(--borda);
-    border-radius: 20px;
-    background: transparent;
-    color: var(--texto-suave);
-    font: inherit;
-    font-size: 0.875rem;
+    border-radius: 50%;
+    background-color: var(--fundo);
+    color: var(--destaque);
     cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s, transform 0.3s;
 }
 
 .botao-tema:hover {
-    color: var(--texto);
     border-color: var(--destaque);
+    background-color: var(--verde-1);
+    transform: rotate(20deg);
 }
 
-.icone-tema {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: var(--destaque);
+.tema-claro .botao-tema:hover {
+    background-color: #dafbe1;
+}
+
+.icone-lua {
+    display: none;
+}
+
+.tema-claro .icone-sol {
+    display: none;
+}
+
+.tema-claro .icone-lua {
+    display: block;
 }
 
 /* Botão hambúrguer, só aparece no celular */
