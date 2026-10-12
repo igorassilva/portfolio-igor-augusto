@@ -119,8 +119,9 @@ if (formulario) {
 
         // Simulação do envio: não manda para nenhum servidor, só limpa e confirma
         const nome = document.getElementById("nome").value.trim();
-        document.getElementById("modal-texto").textContent =
-            "Obrigado pelo contato, " + nome + "! Responderei assim que possível.";
+        const modalTexto = document.getElementById("modal-texto");
+        modalTexto.textContent = "Obrigado pelo contato, " + nome + "!";
+        modalTexto.append(document.createElement("br"), "Responderei assim que possível.");
         formulario.reset();
         modal.hidden = false;
         fecharModal.focus();
