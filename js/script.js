@@ -56,3 +56,91 @@ filtros.forEach(function (filtro) {
         });
     });
 });
+
+// Validação do formulário de contato
+const formulario = document.getElementById("formulario-contato");
+
+function mostrarErro(campo, mensagem) {
+    document.getElementById("erro-" + campo.id).textContent = mensagem;
+    campo.parentElement.classList.toggle("invalido", mensagem !== "");
+}
+
+function emailValido(email) {
+    // Formato usuario@dominio.com
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function validarCampo(campo) {
+    const valor = campo.value.trim();
+
+    if (valor === "") {
+        mostrarErro(campo, "Preencha este campo.");
+        return false;
+    }
+
+    if (campo.id === "email" && !emailValido(valor)) {
+        mostrarErro(campo, "Informe um e-mail válido, ex: usuario@dominio.com");
+        return false;
+    }
+
+    mostrarErro(campo, "");
+    return true;
+}
+
+if (formulario) {
+    const campos = formulario.querySelectorAll("input, textarea");
+    const modal = document.getElementById("modal");
+    const fecharModal = document.getElementById("fechar-modal");
+
+    // Remove o erro enquanto o usuário corrige o campo
+    campos.forEach(function (campo) {
+        campo.addEventListener("input", function () {
+            if (campo.parentElement.classList.contains("invalido")) {
+                validarCampo(campo);
+            }
+        });
+    });
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        let valido = true;
+        campos.forEach(function (campo) {
+            if (!validarCampo(campo)) {
+                valido = false;
+            }
+        });
+
+        if (!valido) {
+            formulario.querySelector(".invalido input, .invalido textarea").focus();
+            return;
+        }
+
+        // Simulação do envio: não manda para nenhum servidor, só limpa e confirma
+        const nome = document.getElementById("nome").value.trim();
+        document.getElementById("modal-texto").textContent =
+            "Obrigado pelo contato, " + nome + "! Responderei assim que possível.";
+        formulario.reset();
+        modal.hidden = false;
+        fecharModal.focus();
+    });
+
+    function esconderModal() {
+        modal.hidden = true;
+    }
+
+    fecharModal.addEventListener("click", esconderModal);
+
+    // Fecha o modal clicando fora da caixa ou apertando Esc
+    modal.addEventListener("click", function (evento) {
+        if (evento.target === modal) {
+            esconderModal();
+        }
+    });
+
+    document.addEventListener("keydown", function (evento) {
+        if (evento.key === "Escape" && !modal.hidden) {
+            esconderModal();
+        }
+    });
+}
