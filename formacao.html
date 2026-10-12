@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formação acadêmica e cursos de Igor Augusto dos Santos Silva.">
+    <title>Formação | Igor Augusto</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/tema.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho com o menu, igual em todas as páginas -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="sobre.html" class="logo">igor<span>assilva</span></a>
+
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="sobre.html">Sobre mim</a></li>
+                    <li><a href="formacao.html" class="ativo">Formação</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <button class="botao-tema" id="botao-tema" aria-label="Alternar tema claro/escuro">
+                    <span class="icone-tema" aria-hidden="true"></span>
+                    <span class="texto-tema">Tema claro</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="titulo-pagina">
+            <h1>Formação</h1>
+            <p>Minha formação acadêmica, cursos complementares e idiomas.</p>
+        </section>
+
+        <section class="bloco">
+            <h2>Formação acadêmica</h2>
+            <!-- Linha do tempo: cada item é um article dentro da lista -->
+            <ol class="linha-tempo">
+                <li>
+                    <article class="cartao">
+                        <span class="periodo">Em andamento</span>
+                        <h3>Engenharia de Software</h3>
+                        <p class="instituicao">Centro Universitário Internacional UNINTER</p>
+                        <p>Graduação com foco em desenvolvimento, arquitetura e qualidade de software.</p>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <section class="bloco">
+            <h2>Cursos complementares</h2>
+            <div class="grade grade-2">
+                <article class="cartao">
+                    <h3>curso.dev</h3>
+                    <p class="instituicao">Filipe Deschamps</p>
+                    <p>Desenvolvimento de um clone do TabNews com Next.js, PostgreSQL, testes automatizados e CI.</p>
+                </article>
+                <article class="cartao">
+                    <h3>Full Cycle</h3>
+                    <p class="instituicao">Full Cycle</p>
+                    <p>Domain-Driven Design (modelagem tática e patterns), Docker e microsserviços.</p>
+                </article>
+                <article class="cartao">
+                    <h3>Ignite</h3>
+                    <p class="instituicao">Rocketseat</p>
+                    <p>Trilhas de Node.js e React, com APIs REST, Clean Architecture, DDD e NestJS.</p>
+                </article>
+                <article class="cartao">
+                    <h3>Next.js App Router</h3>
+                    <p class="instituicao">Vercel (nextjs.org/learn)</p>
+                    <p>Construção de um dashboard com o App Router do Next.js e deploy na Vercel.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <h2>Idiomas</h2>
+            <ul class="idiomas">
+                <li>
+                    <span class="idioma-nome">Português</span>
+                    <span class="idioma-nivel">Nativo</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; <span id="ano-atual">2026</span> Igor Augusto dos Santos Silva</p>
+            <p>
+                <a href="https://github.com/igorassilva" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/igor-augusto-santos-silva/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

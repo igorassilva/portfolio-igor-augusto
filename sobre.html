@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Igor Augusto dos Santos Silva, desenvolvedor backend.">
+    <title>Sobre mim | Igor Augusto</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/tema.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho com o menu, igual em todas as páginas -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="sobre.html" class="logo">igor<span>assilva</span></a>
+
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="sobre.html" class="ativo">Sobre mim</a></li>
+                    <li><a href="formacao.html">Formação</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <button class="botao-tema" id="botao-tema" aria-label="Alternar tema claro/escuro">
+                    <span class="icone-tema" aria-hidden="true"></span>
+                    <span class="texto-tema">Tema claro</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="destaque">
+            <div class="destaque-texto">
+                <p class="saudacao">Olá, eu sou</p>
+                <h1>Igor Augusto dos Santos Silva</h1>
+                <p class="cargo">Desenvolvedor Backend</p>
+                <p>
+                    Desenvolvedor backend com mais de 10 anos de experiência, e um curioso no frontend.
+                    Gosto de entender como as coisas funcionam por baixo dos panos, de código bem organizado
+                    e de aprender tecnologias novas sempre que surge a oportunidade.
+                </p>
+                <div class="acoes">
+                    <a href="portfolio.html" class="botao">Ver projetos</a>
+                    <a href="contato.html" class="botao botao-secundario">Entrar em contato</a>
+                </div>
+            </div>
+            <div class="destaque-foto">
+                <img src="https://github.com/igorassilva.png" alt="Foto de Igor Augusto" width="260" height="260">
+            </div>
+        </section>
+
+        <section class="bloco">
+            <h2>Um pouco sobre mim</h2>
+            <div class="grade grade-3">
+                <article class="cartao">
+                    <h3>Experiência</h3>
+                    <p>Mais de 10 anos trabalhando com desenvolvimento backend, construindo APIs, integrações e sistemas web.</p>
+                </article>
+                <article class="cartao">
+                    <h3>Frontend</h3>
+                    <p>Curioso no frontend: sempre que posso estudo HTML, CSS, JavaScript e frameworks como React e Next.js.</p>
+                </article>
+                <article class="cartao">
+                    <h3>Estudos</h3>
+                    <p>Atualmente cursando Engenharia de Software na UNINTER para aprofundar a base teórica da área.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <h2>Tecnologias que utilizo</h2>
+            <ul class="tags">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Node.js</li>
+                <li>NestJS</li>
+                <li>PHP</li>
+                <li>PostgreSQL</li>
+                <li>Prisma</li>
+                <li>Docker</li>
+                <li>AWS Lambda</li>
+                <li>GitHub Actions</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </section>
+
+        <section class="bloco">
+            <h2>Hobbies</h2>
+            <div class="grade grade-2">
+                <article class="cartao cartao-hobby">
+                    <h3>Counter-Strike</h3>
+                    <p>Jogador "profissional" de CS nas horas vagas. Nada como uma partida com os amigos depois do trabalho.</p>
+                </article>
+                <article class="cartao cartao-hobby">
+                    <h3>Rocket League</h3>
+                    <p>Futebol com carros: outro jogo que ocupa boa parte do meu tempo livre.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; <span id="ano-atual">2026</span> Igor Augusto dos Santos Silva</p>
+            <p>
+                <a href="https://github.com/igorassilva" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/igor-augusto-santos-silva/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

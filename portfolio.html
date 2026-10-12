@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos desenvolvidos por Igor Augusto dos Santos Silva.">
+    <title>Portfólio | Igor Augusto</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/tema.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho com o menu, igual em todas as páginas -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="sobre.html" class="logo">igor<span>assilva</span></a>
+
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="sobre.html">Sobre mim</a></li>
+                    <li><a href="formacao.html">Formação</a></li>
+                    <li><a href="portfolio.html" class="ativo">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <button class="botao-tema" id="botao-tema" aria-label="Alternar tema claro/escuro">
+                    <span class="icone-tema" aria-hidden="true"></span>
+                    <span class="texto-tema">Tema claro</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="titulo-pagina">
+            <h1>Portfólio</h1>
+            <p>Alguns projetos que desenvolvi e estão disponíveis no meu GitHub.</p>
+        </section>
+
+        <!-- Botões de filtro: o data-filtro é comparado com o data-categoria de cada projeto -->
+        <div class="filtros" id="filtros">
+            <button class="filtro ativo" data-filtro="todos">Todos</button>
+            <button class="filtro" data-filtro="backend">Backend</button>
+            <button class="filtro" data-filtro="frontend">Frontend</button>
+            <button class="filtro" data-filtro="devops">DevOps</button>
+        </div>
+
+        <section class="grade grade-3 projetos">
+            <article class="cartao projeto" data-categoria="frontend backend">
+                <h3>Clone TabNews</h3>
+                <p>Clone do TabNews feito durante o curso.dev, com Next.js, PostgreSQL, migrations, testes de integração com Jest e CI no GitHub Actions.</p>
+                <ul class="tags tags-pequenas">
+                    <li>Next.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Jest</li>
+                </ul>
+                <div class="links-projeto">
+                    <a href="https://github.com/igorassilva/clone-tabnews" target="_blank" rel="noopener">Código</a>
+                    <a href="https://clone-tabnews-blush-eta.vercel.app" target="_blank" rel="noopener">Ver online</a>
+                </div>
+            </article>
+
+            <article class="cartao projeto" data-categoria="frontend">
+                <h3>Next.js Dashboard</h3>
+                <p>Dashboard financeiro criado no curso oficial do Next.js, usando App Router, TypeScript e deploy na Vercel.</p>
+                <ul class="tags tags-pequenas">
+                    <li>Next.js</li>
+                    <li>TypeScript</li>
+                    <li>Vercel</li>
+                </ul>
+                <div class="links-projeto">
+                    <a href="https://github.com/igorassilva/nextjs-dashboard" target="_blank" rel="noopener">Código</a>
+                    <a href="https://nextjs-dashboard-pi-ten-29.vercel.app" target="_blank" rel="noopener">Ver online</a>
+                </div>
+            </article>
+
+            <article class="cartao projeto" data-categoria="backend">
+                <h3>Nest Clean</h3>
+                <p>API de fórum com NestJS aplicando Clean Architecture e DDD, com Prisma, Docker e testes unitários e e2e com Vitest.</p>
+                <ul class="tags tags-pequenas">
+                    <li>NestJS</li>
+                    <li>Prisma</li>
+                    <li>Vitest</li>
+                </ul>
+                <div class="links-projeto">
+                    <a href="https://github.com/igorassilva/05-nest-clean" target="_blank" rel="noopener">Código</a>
+                </div>
+            </article>
+
+            <article class="cartao projeto" data-categoria="backend">
+                <h3>DDD: Modelagem Tática</h3>
+                <p>Estudo de Domain-Driven Design do curso Full Cycle: entidades, value objects, agregados, repositórios e eventos de domínio.</p>
+                <ul class="tags tags-pequenas">
+                    <li>TypeScript</li>
+                    <li>DDD</li>
+                    <li>Jest</li>
+                </ul>
+                <div class="links-projeto">
+                    <a href="https://github.com/igorassilva/ddd-modelagem-tatica-e-parttners" target="_blank" rel="noopener">Código</a>
+                </div>
+            </article>
+
+            <article class="cartao projeto" data-categoria="devops">
+                <h3>create-env-json</h3>
+                <p>GitHub Action que grava variáveis de ambiente em um arquivo JSON para ser usado nos próximos passos do workflow.</p>
+                <ul class="tags tags-pequenas">
+                    <li>GitHub Actions</li>
+                    <li>JavaScript</li>
+                </ul>
+                <div class="links-projeto">
+                    <a href="https://github.com/igorassilva/create-env-json" target="_blank" rel="noopener">Código</a>
+                </div>
+            </article>
+
+            <article class="cartao projeto" data-categoria="backend devops">
+                <h3>User API Serverless</h3>
+                <p>API de usuários serverless com AWS Lambda, configurada e publicada com o AWS SAM.</p>
+                <ul class="tags tags-pequenas">
+                    <li>AWS Lambda</li>
+                    <li>AWS SAM</li>
+                    <li>Node.js</li>
+                </ul>
+                <div class="links-projeto">
+                    <a href="https://github.com/igorassilva/user-api-serverless" target="_blank" rel="noopener">Código</a>
+                </div>
+            </article>
+        </section>
+
+        <p class="mais-projetos">
+            Outros projetos em <a href="https://github.com/igorassilva?tab=repositories" target="_blank" rel="noopener">github.com/igorassilva</a>
+        </p>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; <span id="ano-atual">2026</span> Igor Augusto dos Santos Silva</p>
+            <p>
+                <a href="https://github.com/igorassilva" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/igor-augusto-santos-silva/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

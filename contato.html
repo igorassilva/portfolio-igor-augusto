@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com Igor Augusto dos Santos Silva.">
+    <title>Contato | Igor Augusto</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/tema.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho com o menu, igual em todas as páginas -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="sobre.html" class="logo">igor<span>assilva</span></a>
+
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="sobre.html">Sobre mim</a></li>
+                    <li><a href="formacao.html">Formação</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html" class="ativo">Contato</a></li>
+                </ul>
+                <button class="botao-tema" id="botao-tema" aria-label="Alternar tema claro/escuro">
+                    <span class="icone-tema" aria-hidden="true"></span>
+                    <span class="texto-tema">Tema claro</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="titulo-pagina">
+            <h1>Contato</h1>
+            <p>Quer conversar sobre algum projeto ou oportunidade? Mande uma mensagem.</p>
+        </section>
+
+        <div class="contato">
+            <!-- novalidate desativa a validação do navegador, quem valida é o script.js -->
+            <form class="cartao formulario" id="formulario-contato" novalidate>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                    <span class="erro" id="erro-nome"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="usuario@dominio.com">
+                    <span class="erro" id="erro-email"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem"></textarea>
+                    <span class="erro" id="erro-mensagem"></span>
+                </div>
+
+                <button type="submit" class="botao">Enviar mensagem</button>
+            </form>
+
+            <aside class="cartao redes">
+                <h2>Redes</h2>
+                <p>Você também pode me encontrar por aqui:</p>
+                <ul>
+                    <li>
+                        <span>GitHub</span>
+                        <a href="https://github.com/igorassilva" target="_blank" rel="noopener">github.com/igorassilva</a>
+                    </li>
+                    <li>
+                        <span>LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/igor-augusto-santos-silva/" target="_blank" rel="noopener">in/igor-augusto-santos-silva</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Modal exibido depois do envio simulado do formulário -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+        <div class="modal-conteudo">
+            <h2 id="modal-titulo">Mensagem enviada com sucesso!</h2>
+            <p id="modal-texto">Obrigado pelo contato, responderei assim que possível.</p>
+            <button class="botao" id="fechar-modal">Fechar</button>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; <span id="ano-atual">2026</span> Igor Augusto dos Santos Silva</p>
+            <p>
+                <a href="https://github.com/igorassilva" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/igor-augusto-santos-silva/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
