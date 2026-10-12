@@ -407,8 +407,8 @@ img {
 .idiomas {
     list-style: none;
     display: grid;
-    gap: 12px;
-    max-width: 480px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .idiomas li {
@@ -720,7 +720,8 @@ img {
     }
 
     .grade-2,
-    .grade-3 {
+    .grade-3,
+    .idiomas {
         grid-template-columns: 1fr;
     }
 
